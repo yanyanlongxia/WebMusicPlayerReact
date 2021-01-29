@@ -1,0 +1,73 @@
+@import "./theme.scss";
+$constainerRadius:0px;
+.container{
+	display: inline-flex;
+	flex: 0 0 50px;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: $constainerRadius;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.1s ease;
+	padding-left: 20px;
+	padding-right: 20px;
+	.plusHidden{
+		visibility: hidden;
+	}
+	&:hover{
+		.plusHidden{
+			visibility: visible;
+		}
+	}
+}
+.plusVisible{
+	visibility: visible;
+}
+.head{
+	display: flex;
+	align-items:center;
+	height:100%;
+	flex:1;
+	padding-left: 10px;
+}
+.tail{
+	display: flex;
+	align-items: center;
+	border-radius: 0 $constainerRadius $constainerRadius 0;
+	height: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: relative;
+	i{
+		font-size: 1.5em;
+		color: $fontColorData;
+	}
+}
+.header{
+	display: inline-flex;
+	margin-left: 10px;
+	font-size: 1.3em;
+	font-weight: normal;
+}
+.icon{
+	font-size: 1.5em;
+	color: $iconColor;
+}
+.playing{
+	background-color: inherit;
+	// background-color: rgba(255, 250, 117, 0.54);
+	color:$themeColor;
+	.icon{
+		color: $themeColor;
+	}
+	&:hover{
+		background-color: rgba(255, 255, 255, 0.07);
+	}
+}
+.notPlaying{
+	background-color: inherit;
+	color:$fontColorData;
+	&:hover{
+		background-color: rgba(255, 255, 255, 0.07);
+	}
+}
